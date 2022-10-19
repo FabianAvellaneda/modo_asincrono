@@ -5,7 +5,7 @@ const f = async ()=>{
     try{
         const response = await needle('get',endpoint)
         response.body.forEach(cat =>{
-            console.log(cat)
+            console.log(cat.text)
             console.log('------------')
         })
     }catch(error){
@@ -14,9 +14,9 @@ const f = async ()=>{
 }
 
 const exito = (response)=>{
-    const animes = response
-    animes.forEach(element => {
-        console.log(`animes: ${element.name}`)
+    const cats = response
+    cats.forEach(element => {
+        console.log(`cats: ${element.name}`)
         console.log('----------------')
     })
 }
